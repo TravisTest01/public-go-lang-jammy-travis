@@ -1,0 +1,51 @@
+os: linux
+jobs:
+  include:
+    - dist: jammy
+      virt: vm
+      language: go
+      arch: amd64
+      script:
+        - go run hello_world.go
+    - dist: jammy
+      virt: lxd
+      language: go
+      arch: amd64
+      script:
+        - go run hello_world.go
+    - dist: xenial
+      virt: vm
+      language: go
+      arch: amd64
+      script:
+        - go run hello_world.go
+    - dist: xenial
+      virt: lxd
+      language: go
+      arch: amd64
+      script:
+        - go run hello_world.go
+    - dist: focal
+      virt: vm
+      language: go
+      arch: amd64
+      script:
+        - go run hello_world.go
+    - dist: focal
+      virt: lxd
+      language: go
+      arch: amd64
+      script:
+        - go run hello_world.go
+    - dist: bionic
+      virt: vm
+      language: go
+      arch: amd64
+      script:
+        - go run hello_world.go
+    - dist: bionic
+      virt: lxd
+      language: go
+      arch: amd64
+      script:
+        - go run hello_world.go
